@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- Content specific to each page goes here -->
+<div class="container">
+    <div class="form-container" id="loginFormContainer">
+        <form id="loginForm" onsubmit="return validateLogin()">
+            <h1>Login</h1>
+
+            <div class="input-container">
+                <label for="loginUsername">Username:</label>
+                <input type="text" id="loginUsername" name="loginUsername" required>
+            </div>
+
+            <div class="input-container">
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" name="loginPassword" required>
+            </div>
+
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="#" onclick="showRegistrationForm()">Register here</a></p>
+    </div>
+
+    <div class="form-container hidden" id="registrationFormContainer">
+        <form id="registrationForm" onsubmit="return validateRegistration()">
+            <h1>Register</h1>
+
+            <div class="input-container">
+                <label for="registerUsername">Username:</label>
+                <input type="text" id="registerUsername" name="registerUsername" required>
+            </div>
+
+            <div class="input-container">
+                <label for="registerPassword">Password:</label>
+                <input type="password" id="registerPassword" name="registerPassword" required>
+            </div>
+
+            <div class="input-container">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="#" onclick="showLoginForm()">Login here</a></p>
+    </div>
+</div>
+</body>
+</html>
